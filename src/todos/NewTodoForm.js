@@ -22,7 +22,7 @@ const NewTodoForm = ({ todos, onCreatePressed }) => {
             (todo) => todo.text === inputValue
           );
           if (!isDuplicateText) {
-            onCreatePressed(input);
+            onCreatePressed(inputValue);
             setInputValue("");
           }
         }}
@@ -38,7 +38,7 @@ const mapStateToProps = (state) => ({
   todos: state.todos,
 });
 
-const mapDispatchToProps = (state) => ({
+const mapDispatchToProps = (dispatch) => ({
   onCreatePressed: (text) => dispatch(createTodo(text)),
 });
 
