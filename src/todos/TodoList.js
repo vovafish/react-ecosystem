@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import "./TodoList.css";
 import NewTodoForm from "./NewTodoForm";
 import TodoListItem from "./TodoListItem";
-import { removeTodo, REMOVE_TODO } from "./actions";
+import { removeTodo } from "./actions";
+import "./TodoList.css";
 
 const TodoList = ({ todos = [], onRemovePressed }) => (
   <div className="list-wrapper">
@@ -15,7 +15,7 @@ const TodoList = ({ todos = [], onRemovePressed }) => (
 );
 
 const mapStateToProps = (state) => ({
-  todos: state.todo,
+  todos: state.todos,
 });
 
 const mapDispatchToProps = (dispatch) => ({

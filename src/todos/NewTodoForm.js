@@ -11,14 +11,13 @@ const NewTodoForm = ({ todos, onCreatePressed }) => {
       <input
         className="new-todo-input"
         type="text"
-        placeholder="Type Your New ToDo"
+        placeholder="Type your new todo here"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
       />
       <button
         onClick={() => {
           const isDuplicateText = todos.some(
-            //if any of our todos text has text equal to the current input value
             (todo) => todo.text === inputValue
           );
           if (!isDuplicateText) {
@@ -28,7 +27,7 @@ const NewTodoForm = ({ todos, onCreatePressed }) => {
         }}
         className="new-todo-button"
       >
-        Create ToDo
+        Create Todo
       </button>
     </div>
   );
