@@ -11,9 +11,9 @@ export const removeTodo = (todo) => ({
 });
 
 export const COMPLETED_TODO = "COMPLETED_TODO";
-export const completedTodo = (text) => ({
+export const completedTodo = (todo) => ({
   type: COMPLETED_TODO,
-  payload: { text },
+  payload: { todo },
 });
 
 export const LOAD_TODOS_IN_PROGRESS = "LOAD_TODOS_IN_PROGRESS";
